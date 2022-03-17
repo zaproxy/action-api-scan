@@ -1,4 +1,8 @@
-const core = require('@actions/core');
+
+
+// Add your instrumentation key or use the APPLICATIONINSIGHTSKEY environment variable on your production machine to start collecting data.
+var ai = require('applicationinsights');
+ai.setup(process.env.APPLICATIONINSIGHTSKEY || 'your_instrumentation_key').start();const core = require('@actions/core');
 const exec = require('@actions/exec');
 const common = require('@zaproxy/actions-common-scans');
 const _ = require('lodash');
