@@ -64,7 +64,7 @@ if it identifies any alerts. Set this option to `true` if you want to fail the s
 ```
 steps:
   - name: ZAP Scan
-    uses: zaproxy/action-api-scan@v0.1.0
+    uses: zaproxy/action-api-scan@v0.1.1
     with:
       target: 'https://www.zaproxy.org/'
 ```
@@ -85,7 +85,7 @@ jobs:
           ref: master
 
       - name: ZAP Scan
-        uses: zaproxy/action-api-scan@v0.1.0
+        uses: zaproxy/action-api-scan@v0.1.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
