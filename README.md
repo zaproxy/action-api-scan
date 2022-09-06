@@ -57,6 +57,15 @@ You do not have to create a dedicated token. Make sure to use the GitHub's defau
 **Optional** By default ZAP Docker container will fail with an [exit code](https://github.com/zaproxy/zaproxy/blob/7abbd57f6894c2abf4f1ed00fb95e99c34ef2e28/docker/zap-api-scan.py#L35),
 if it identifies any alerts. Set this option to `true` if you want to fail the status of the GitHub Scan if ZAP identifies any alerts during the scan.
 
+## Environment variables
+
+If set, the following [ZAP authentication environment variables](https://www.zaproxy.org/docs/authentication/handling-auth-yourself/#authentication-env-vars)
+will be copied into the docker container:
+
+- `ZAP_AUTH_HEADER_VALUE`
+- `ZAP_AUTH_HEADER`
+- `ZAP_AUTH_HEADER_SITE`
+
 ## Example usage
 
 ** Basic **
