@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+- To use Node 16
+- Updated dependencies
+
 ## [0.2.0] - 2022-09-09
 
 ### Added
