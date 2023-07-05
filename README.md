@@ -73,7 +73,7 @@ will be copied into the docker container:
 ```
 steps:
   - name: ZAP Scan
-    uses: zaproxy/action-api-scan@v0.3.0
+    uses: zaproxy/action-api-scan@v0.3.1
     with:
       target: 'https://www.zaproxy.org/'
 ```
@@ -94,7 +94,7 @@ jobs:
           ref: master
 
       - name: ZAP Scan
-        uses: zaproxy/action-api-scan@v0.3.0
+        uses: zaproxy/action-api-scan@v0.3.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
