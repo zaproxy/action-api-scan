@@ -1,6 +1,6 @@
 # Action API Scan
 
-A GitHub Action for running the OWASP ZAP [API scan](https://www.zaproxy.org/docs/docker/api-scan/) to perform
+A GitHub Action for running the ZAP [API scan](https://www.zaproxy.org/docs/docker/api-scan/) to perform
 Dynamic Application Security Testing (DAST). 
  
 **WARNING** this action will perform attacks on the target API.
@@ -97,7 +97,7 @@ jobs:
         uses: zaproxy/action-api-scan@v0.3.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          docker_name: 'owasp/zap2docker-stable'
+          docker_name: 'ghcr.io/zaproxy/zaproxy:stable'
           format: openapi
           target: 'https://www.zaproxy.org/'
           rules_file_name: '.zap/rules.tsv'

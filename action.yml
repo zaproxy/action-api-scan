@@ -1,5 +1,5 @@
-name: 'OWASP ZAP API Scan'
-description: 'Scans the web application with the OWASP ZAP API Scan'
+name: 'ZAP API Scan'
+description: 'Scans the web application with the ZAP API Scan'
 branding:
   icon: 'zap'
   color: 'blue'
@@ -21,7 +21,7 @@ inputs:
   docker_name:
     description: 'The Docker file to be executed'
     required: true
-    default: 'owasp/zap2docker-stable'
+    default: 'ghcr.io/zaproxy/zaproxy:stable'
   cmd_options:
     description: 'Additional command line options'
     required: false
