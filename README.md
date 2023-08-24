@@ -57,6 +57,10 @@ You do not have to create a dedicated token. Make sure to use the GitHub's defau
 **Optional** By default ZAP Docker container will fail with an [exit code](https://github.com/zaproxy/zaproxy/blob/7abbd57f6894c2abf4f1ed00fb95e99c34ef2e28/docker/zap-api-scan.py#L35),
 if it identifies any alerts. Set this option to `true` if you want to fail the status of the GitHub Scan if ZAP identifies any alerts during the scan.
 
+### `artifact_name`
+
+**Optional** By default the action will attach the report to the build with the name `zap_scan`. Set this to a different string to name it something else. Consult [GitHub's documentation](https://github.com/actions/toolkit/blob/main/packages/artifact/docs/additional-information.md#non-supported-characters) for which artifact names are allowed.
+
 ## Environment variables
 
 If set, the following [ZAP authentication environment variables](https://www.zaproxy.org/docs/authentication/handling-auth-yourself/#authentication-env-vars)
@@ -73,7 +77,7 @@ will be copied into the docker container:
 ```
 steps:
   - name: ZAP Scan
-    uses: zaproxy/action-api-scan@v0.4.0
+    uses: zaproxy/action-api-scan@v0.5.0
     with:
       target: 'https://www.zaproxy.org/'
 ```
@@ -94,7 +98,7 @@ jobs:
           ref: master
 
       - name: ZAP Scan
-        uses: zaproxy/action-api-scan@v0.4.0
+        uses: zaproxy/action-api-scan@v0.5.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'ghcr.io/zaproxy/zaproxy:stable'
