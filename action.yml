@@ -11,6 +11,18 @@ inputs:
   target:
     description: 'Target URL'
     required: true
+  html_report_name: 
+    description: 'Name of the html report file'
+    required: false
+    default: 'report_html.html'
+  json_report_name:
+    description: 'Name of the json report file'
+    required: false
+    default: 'report_json.json'
+  md_report_name:
+    description: 'Name of the markdown report file'
+    required: false
+    default: 'report_md.md'
   format:
     description: 'Format openapi, soap or graphql'
     required: false
