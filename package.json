@@ -24,7 +24,7 @@
     "@actions/core": "^1.11.1",
     "@actions/exec": "^1.1.1",
     "@zaproxy/actions-common-scans": "^1.4.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.23"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.36.1"
