@@ -7,6 +7,10 @@ Dynamic Application Security Testing (DAST).
 You should only scan targets that you have permission to test.
 You should also check with your hosting company and any other services such as CDNs that may be affected before running this action.
 
+**WARNING** in order for this action to create issues, you have to grant "Read and Write permissions" in
+your repository's settings (Settings > Actions > General > Workflow permissions). If it is part of an organisation, you have to do it
+first in the organisation's settings (YOUR ORG > Settings > Actions > General > Workflow permissions).
+
 ## Inputs
 
 ### `target`
