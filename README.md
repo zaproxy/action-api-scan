@@ -7,10 +7,6 @@ Dynamic Application Security Testing (DAST).
 You should only scan targets that you have permission to test.
 You should also check with your hosting company and any other services such as CDNs that may be affected before running this action.
 
-**WARNING** in order for this action to create issues, you have to grant "Read and Write permissions" in
-your repository's settings (Settings > Actions > General > Workflow permissions). If it is part of an organisation, you have to do it
-first in the organisation's settings (YOUR ORG > Settings > Actions > General > Workflow permissions).
-
 ## Inputs
 
 ### `target`
@@ -46,6 +42,9 @@ Make sure to checkout the repository (actions/checkout@v2) to provide the ZAP ru
 
 **Optional** By default the action will file the report to the GitHub issue using the `issue_title` input.
 Set this to false if you don't want the issue to be created or updated.
+
+> Ensure you **have the right permissions** for this action to create issues. You might have to check your repository's or
+> organisation's settings.
 
 ### `issue_title`
 
