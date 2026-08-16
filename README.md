@@ -43,6 +43,9 @@ Make sure to checkout the repository (actions/checkout@v2) to provide the ZAP ru
 **Optional** By default the action will file the report to the GitHub issue using the `issue_title` input.
 Set this to false if you don't want the issue to be created or updated.
 
+> Ensure you **have the right permissions** for this action to create issues. You might have to check your repository's or
+> organisation's settings.
+
 ### `issue_title`
 
 **Optional** The title for the GitHub issue to be created.
